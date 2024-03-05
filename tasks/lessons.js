@@ -45,15 +45,15 @@ if (emr === "mr") {
 }
 //2
 if (emr === "wa") {
-  fs.writeFileSync("./ali.txt", `Whatpsapp: ${ad}: ${data.join(" ")} \n`, {
+  fs.writeFileSync("./data.txt", `Whatpsapp: ${ad}: ${data.join(" ")} \n`, {
     flag: "a",
   });
 } else if (emr === "tg") {
-  fs.writeFileSync("./ali.txt", `Telegram: ${ad}: ${data.join(" ")} \n`, {
+  fs.writeFileSync("./data.txt", `Telegram: ${ad}: ${data.join(" ")} \n`, {
     flag: "a",
   });
 } else if (emr === "ln") {
-  fs.writeFileSync("./ali.txt", `Linkedin: ${ad}: ${data.join(" ")} \n`, {
+  fs.writeFileSync("./data.txt", `Linkedin: ${ad}: ${data.join(" ")} \n`, {
     flag: "a",
   });
 }
@@ -61,11 +61,11 @@ if (emr === "wa") {
 //************************* */
 const letter = data.join(" ");
 if (emr === "add") {
-  fs.writeFileSync("./ali.txt", `${ad}:${letter}\n`);
+  fs.writeFileSync("./data.txt", `${ad}:${letter}\n`);
 }
 //weather
 if (emr === "add") {
-  fs.writeFileSync("./ali.txt", `${ad}:${letter}C\n`);
+  fs.writeFileSync("./data.txt", `${ad}:${letter}C\n`);
 }
 
 //with axios
@@ -73,7 +73,7 @@ axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
   const data = res.data;
   data.forEach((element) => {
     fs.writeFileSync(
-      "./ali.txt",
+      "./data.txt",
       `Name:${element.name}:\n Username:${element.username}\n---------- \n `,
       {
         flag: "a",
