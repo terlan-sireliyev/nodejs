@@ -1,13 +1,8 @@
-const fs = require("fs");
+import fs from "fs";
+import axios from "axios";
+const [, , emr, ad, ...data] = process.argv;
+// const letter = data.join(" ");
 
-function upper(text) {
-  let uppercaseText = text.toUpperCase();
-  fs.writeFileSync("./src/demo.txt", uppercaseText, { flag: "a" });
+if (emr === "add") {
+  fs.writeFileSync(ad, data.join(" "));
 }
-upper("hay");
-
-function bdd(copy, create) {
-  fs.writeFileSync(create, copy, { flag: "a" });
-  fs.readFileSync(create);
-}
-bdd("Hello", "./demo.txt");
