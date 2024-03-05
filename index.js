@@ -1,8 +1,10 @@
-import fs from "fs";
-import axios from "axios";
-const [, , emr, ad, ...data] = process.argv;
-// const letter = data.join(" ");
-
-if (emr === "add") {
-  fs.writeFileSync(ad, data.join(" "));
-}
+import fs, {
+  writeFile,
+  readFile,
+  existsSync,
+  appendFile,
+  copyFile,
+  rename,
+  unlink,
+} from "fs";
+const metin = "This is an appended text.";
