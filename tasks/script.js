@@ -10,3 +10,4 @@ copyFaylText("./demo.txt", "./secondFile.txt");
 // task2;
 const d = fs.readFileSync("./demo.txt", "utf-8");
 fs.writeFileSync("./secondFile.txt", d);
+//today task
